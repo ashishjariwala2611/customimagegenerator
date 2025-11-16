@@ -7,7 +7,13 @@ import Index from "./pages/Index";
 import SupportCardGenerator from "./pages/SupportCardGenerator";
 import NotFound from "./pages/NotFound";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 60 * 1000,
+    },
+  },
+});
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
