@@ -142,90 +142,109 @@ const SupportCardGenerator = () => {
             <div className="relative">
               <div
                 ref={cardRef}
-                className="bg-white shadow-2xl"
+                className="shadow-2xl"
                 style={{
                   width: "540px",
                   height: "675px",
                   position: "relative",
+                  background: "linear-gradient(135deg, #e8e0f5 0%, #f5f0ff 50%, #e8e0f5 100%)",
                 }}
               >
-                {/* Header with Logo */}
-                <div className="absolute top-0 left-0 right-0 bg-campaign-blue text-white p-6 flex items-center justify-between">
-                  <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center">
-                      <span className="text-campaign-blue font-bold text-xl">★</span>
-                    </div>
-                    <div>
-                      <div className="font-bold text-lg">DISTRICT</div>
-                      <div className="text-sm opacity-90">BAR ASSOCIATION</div>
+                {/* Top Header */}
+                <div className="absolute top-0 left-0 right-0 px-6 py-4 flex items-start justify-between">
+                  <div className="flex-1">
+                    <h1 className="text-campaign-blue font-bold text-2xl leading-tight" style={{ fontFamily: "serif" }}>
+                      સુરત જિલ્લા વકીલ મંડળ
+                    </h1>
+                  </div>
+                  <div className="w-16 h-16 flex-shrink-0">
+                    <div className="w-full h-full rounded-full border-4 border-campaign-blue flex items-center justify-center text-xs text-center bg-white">
+                      <span className="text-campaign-blue font-bold">SEAL</span>
                     </div>
                   </div>
-                  <div className="w-12 h-12 border-2 border-white rounded-full"></div>
                 </div>
 
-                {/* Main Content Area */}
-                <div className="absolute top-28 left-0 right-0 bottom-20 px-8">
-                  {/* I Support Section */}
-                  <div className="text-center mb-8">
-                    <div
-                      className="inline-block px-8 py-3 rounded-lg mb-3"
-                      style={{ backgroundColor: "#f0f4f8" }}
-                    >
-                      <h2 className="text-campaign-red font-bold text-4xl tracking-wide">
-                        I Support
-                      </h2>
-                    </div>
-                  </div>
-
-                  {/* Name and Photo Section */}
-                  <div className="flex items-center justify-between gap-6 mb-8">
-                    <div className="flex-1">
-                      <div className="bg-gradient-to-r from-campaign-red to-red-600 text-white px-6 py-4 rounded-lg shadow-lg">
-                        <h3 className="font-bold text-3xl leading-tight break-words">
-                          {name || "Your Name Here"}
-                        </h3>
-                      </div>
-                      <div
-                        className="mt-2 px-6 py-2 rounded-lg inline-block"
-                        style={{ backgroundColor: "#fff4e6" }}
-                      >
-                        <span className="text-campaign-red font-semibold text-lg">
-                          (Advocate)
-                        </span>
-                      </div>
-                    </div>
-
+                {/* Candidate Section */}
+                <div className="absolute top-24 left-0 right-0 px-6">
+                  <div className="flex gap-4 mb-4">
+                    {/* Large Candidate Photo - LEFT SIDE */}
                     <div className="flex-shrink-0">
-                      {photo ? (
-                        <div className="relative">
-                          <img
-                            src={photo}
-                            alt="Supporter"
-                            className="w-40 h-40 object-cover rounded-2xl border-4 border-primary shadow-xl"
-                          />
-                        </div>
-                      ) : (
-                        <div className="w-40 h-40 bg-muted rounded-2xl border-4 border-dashed border-border flex items-center justify-center">
-                          <User className="h-16 w-16 text-muted-foreground" />
-                        </div>
-                      )}
+                      <div className="w-32 h-40 bg-gradient-to-br from-teal-400 to-teal-600 rounded-lg flex items-center justify-center">
+                        <User className="h-20 w-20 text-white opacity-50" />
+                      </div>
+                    </div>
+                    
+                    {/* Candidate Name */}
+                    <div className="flex-1 flex flex-col justify-center">
+                      <h2 className="font-bold text-4xl mb-1" style={{
+                        color: "#d32f2f",
+                        textShadow: "2px 2px 0px #ff6b6b, 3px 3px 0px #ff8787",
+                        lineHeight: "1.2"
+                      }}>
+                        ઉદય એચ. પટેલ
+                      </h2>
+                      <p className="text-campaign-red text-xl font-semibold">(એડવોકેટ)</p>
+                      <p className="text-gray-700 text-sm mt-1">મો.નં.: ૯૮૨૫૪૬૦૯૧</p>
                     </div>
                   </div>
 
-                  {/* Description Text */}
-                  <div className="bg-campaign-light p-4 rounded-lg text-sm text-foreground leading-relaxed">
-                    <p className="text-center">
-                      I hereby extend my support and best wishes to the candidate
-                      for their dedication to serving the legal community and
-                      upholding justice.
+                  {/* Gujarati Description Text */}
+                  <div className="bg-white/60 backdrop-blur-sm p-3 rounded-lg border-2 border-campaign-blue/20 mb-4">
+                    <p className="text-xs leading-relaxed text-gray-800" style={{ fontFamily: "serif" }}>
+                      હું આપને મારા પરિચિત અને વહીલાતના ક્ષેત્રે તેમજ અન્ય રીતે ખુબ જ સેવા ભાવી અને અનુભવી તથા વકીલોના હિતમાં હમેશા અગ્રેસર રહેતા "ઉદય એચ. પટેલ" (એડવોકેટ)ને "પ્રમુખ" તરીકે ચૂંટવા આપનો તથા આપના પરિવાર સાથી વકીલ મિત્રોની મત આપી અખાલી વિજયશી બનાવી વકીલ મંડળની સેવા કરવાની તક આપવા વિનંતી કરું છું.
                     </p>
+                  </div>
+
+                  {/* I Support Section with border */}
+                  <div className="border-t-4 border-b-4 border-campaign-blue py-4 mb-4">
+                    <div className="flex items-center justify-between gap-4">
+                      <div className="flex-1">
+                        <h3 className="text-campaign-red font-bold text-2xl mb-1" style={{ fontFamily: "serif" }}>
+                          I Support
+                        </h3>
+                        <h2 className="font-bold text-3xl" style={{
+                          color: "#d32f2f",
+                          textShadow: "2px 2px 0px #ff6b6b, 3px 3px 0px #ff8787",
+                          lineHeight: "1.1"
+                        }}>
+                          Uday H. Patel
+                        </h2>
+                      </div>
+
+                      {/* Supporter Photo - RIGHT SIDE */}
+                      <div className="flex-shrink-0">
+                        {photo ? (
+                          <div className="relative">
+                            <img
+                              src={photo}
+                              alt="Supporter"
+                              className="w-28 h-32 object-cover rounded-lg border-3 border-gray-300 shadow-lg"
+                            />
+                          </div>
+                        ) : (
+                          <div className="w-28 h-32 bg-gray-200 rounded-lg border-3 border-dashed border-gray-400 flex items-center justify-center">
+                            <User className="h-12 w-12 text-gray-400" />
+                          </div>
+                        )}
+                      </div>
+                    </div>
+
+                    {/* Supporter Name */}
+                    <div className="mt-2 text-right">
+                      <div className="inline-block bg-white px-4 py-1 rounded-full border border-campaign-red">
+                        <p className="text-campaign-red font-bold text-base">
+                          {name || "Your Name"}
+                        </p>
+                      </div>
+                      <p className="text-gray-700 text-sm mt-1">Advocate</p>
+                    </div>
                   </div>
                 </div>
 
                 {/* Footer */}
-                <div className="absolute bottom-0 left-0 right-0 bg-campaign-blue text-white p-6 text-center">
-                  <div className="font-bold text-2xl tracking-wider">
-                    ELECTION DATE: {new Date().toLocaleDateString("en-GB").replace(/\//g, "-")}
+                <div className="absolute bottom-0 left-0 right-0 bg-campaign-blue text-white py-4 px-6 text-center border-t-4 border-campaign-blue">
+                  <div className="font-bold text-xl tracking-wide" style={{ fontFamily: "serif" }}>
+                    મતદાન તારીખ : {new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" }).replace(/\//g, "-")}
                   </div>
                 </div>
               </div>
